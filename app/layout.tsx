@@ -1,17 +1,11 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import { Toaster } from '@/components/ui/sonner';
 import './globals.css';
 
-const geistSans = Geist({
-   variable: '--font-geist-sans',
-   subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-   variable: '--font-geist-mono',
-   subsets: ['latin'],
-});
+// next/font/google downloads from fonts.googleapis.com at build time, which the
+// AiX build sandbox blocks. Fall back to the system font stack.
+const geistSans = { variable: '' };
+const geistMono = { variable: '' };
 
 const siteUrl = 'https://circle.lndev.me';
 

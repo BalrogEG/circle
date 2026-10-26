@@ -1,0 +1,10 @@
+schema: 1
+runtime: docker
+dockerfile: Dockerfile
+port: 3000
+healthcheck: /
+dedicated_tenancy:
+  instance_size: basic-xxs
+  db: none
+  regions_supported: [fra1]
+  custom_domain: true
